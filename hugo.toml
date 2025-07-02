@@ -1,0 +1,4 @@
+baseURL = 'http://terrysbuzz.com/'
+languageCode = 'en-us'
+title = 'Terrys Buzz'
+theme = 'ananke'
