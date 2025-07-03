@@ -1,18 +1,25 @@
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-media_folder: static/img
-public_folder: /img
+  name: github
+  repo: yanter/terrysbuzz
+  branch: main
+  site_domain: terrysbuzz.com
+
+media_folder: "static/uploads" # Adjust based on your media storage location
+public_folder: "/uploads" # URL path for accessing media
+
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: "posts" # This is the name used in the URL
+    label: "Post" # This is the singular name of the content type for the UI
+    folder: "content/post" # The folder where your posts markdown files will be saved
+    create: true # Allows users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template for new posts
+    fields: # List of fields for the front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Comments", name: "comments", widget: "boolean", default: true }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Weight", name: "weight", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
