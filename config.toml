@@ -1,4 +1,4 @@
-baseURL = 'dreamy-bunny-b55ba4.netlify.app'
+baseURL = 'https://dreamy-bunny-b55ba4.netlify.app/'
 languageCode = 'en-us'
 title = 'Terrys Buzz'
 theme = 'ananke'
