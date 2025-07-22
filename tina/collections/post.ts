@@ -17,6 +17,18 @@ const Post: Collection = {
       label: "Date",
       name: "date",
     },
+      {
+          label: "Categories",
+          name: "categories",
+            type: "string",
+            list: true
+          },
+            {
+          type: 'string',
+          name: 'tags',
+          label: 'Tags',
+          list: true,
+        },
     {
       type: "boolean",
       name: "draft",

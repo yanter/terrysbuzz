@@ -6,6 +6,7 @@ categories:
   - cat2
   - cat1
 tags:
+  - tag3
   - test2
   - test
 ---
