@@ -41,11 +41,17 @@ export default defineConfig({
             required: true,
           },
           {
+          label: "Categories",
+          name: "categories",
+            type: "string",
+            list: true
+          },
+            {
           type: 'string',
           name: 'tags',
           label: 'Tags',
           list: true,
-          },
+        },
           {
             type: "rich-text",
             name: "body",
